@@ -1,0 +1,49 @@
+﻿@page "/fetchdata"
+
+<PageTitle>Bistro food inventory</PageTitle>
+
+@using Bistro.WebApp.Data
+@using Bistro.Common.Models
+@inject FoodProductsService ForecastService
+
+<h1>Bistro food inventory</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (_foodProducts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>MiId</th>
+                <th>MiName</th>
+                <th>MiCategory</th>
+                <th>MiPrice</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in _foodProducts)
+            {
+                <tr>
+                    <td>@forecast.MiId</td>
+                    <td>@forecast.MiName</td>
+                    <td>@forecast.MiCategory</td>
+                    <td>@forecast.MiPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<FoodProduct>? _foodProducts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _foodProducts = await ForecastService.GetFoodProductsInventoryAsync();
+    }
+}
