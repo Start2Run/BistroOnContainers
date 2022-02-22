@@ -2,12 +2,14 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+
+ENV ASPNETCORE_URLS=http://+:5001
+EXPOSE 5001
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["src/Bistro.WebApp/Bistro.WebApp.csproj", "src/Bistro.WebApp/"]
+COPY ["src/Bistro.Common/Bistro.Common.csproj", "src/Bistro.Common/"]
 RUN dotnet restore "src/Bistro.WebApp/Bistro.WebApp.csproj"
 COPY . .
 WORKDIR "/src/src/Bistro.WebApp"

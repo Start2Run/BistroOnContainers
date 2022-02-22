@@ -7,6 +7,7 @@
     <UserSecretsId>aspnet-Bistro.WebApp-F995A515-2E3D-4D11-96DD-AAAE1143CB4B</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>

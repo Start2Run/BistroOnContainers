@@ -16,11 +16,14 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
-builder.Services.AddSingleton<FoodProductsService>();
+builder.Services.AddSingleton<BistroFoodInventoryService>();
+
+
 builder.Services.AddHttpClient("BistroWebApi", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:49158/");
+    client.BaseAddress = new Uri(builder.Configuration["BistroApiUrl"]);
 });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,14 +38,14 @@ else
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication();
-app.UseAuthorization();
+//app.UseAuthentication();
+//app.UseAuthorization();
 
 app.MapControllers();
 app.MapBlazorHub();

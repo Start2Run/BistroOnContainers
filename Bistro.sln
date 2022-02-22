@@ -7,11 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A18887D1-3D8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{420A6E9D-F738-40FA-B1B6-7C91F66882A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bistro.Common", "src\Bistro.Common\Bistro.Common.csproj", "{68492421-3C26-4B34-BA4F-9465F64DC494}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bistro.Common", "src\Bistro.Common\Bistro.Common.csproj", "{68492421-3C26-4B34-BA4F-9465F64DC494}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bistro.WebApp", "src\Bistro.WebApp\Bistro.WebApp.csproj", "{2644D710-9159-4331-8BC3-154E35CD7752}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bistro.WebApp", "src\Bistro.WebApp\Bistro.WebApp.csproj", "{2644D710-9159-4331-8BC3-154E35CD7752}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bistro.WebApi", "src\Bistro.WebApi\Bistro.WebApi.csproj", "{E79A1D32-259C-41E7-8A6B-E0FBEFFCCD16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bistro.WebApi", "src\Bistro.WebApi\Bistro.WebApi.csproj", "{E79A1D32-259C-41E7-8A6B-E0FBEFFCCD16}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D23F53F5-B78F-4C17-8177-8E1AE5E57558}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{7312513E-BDA6-46AA-9C9E-09FA0F49E2AB}"
+	ProjectSection(SolutionItems) = preProject
+		nginx\Dockerfile = nginx\Dockerfile
+		nginx\nginx.conf = nginx\nginx.conf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +39,10 @@ Global
 		{E79A1D32-259C-41E7-8A6B-E0FBEFFCCD16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E79A1D32-259C-41E7-8A6B-E0FBEFFCCD16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E79A1D32-259C-41E7-8A6B-E0FBEFFCCD16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D23F53F5-B78F-4C17-8177-8E1AE5E57558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D23F53F5-B78F-4C17-8177-8E1AE5E57558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D23F53F5-B78F-4C17-8177-8E1AE5E57558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D23F53F5-B78F-4C17-8177-8E1AE5E57558}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

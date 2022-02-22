@@ -4,7 +4,7 @@
 
 @using Bistro.WebApp.Data
 @using Bistro.Common.Models
-@inject FoodProductsService ForecastService
+@inject BistroFoodInventoryService BistroFoodInventoryService
 
 <h1>Bistro food inventory</h1>
 
@@ -44,6 +44,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        _foodProducts = await ForecastService.GetFoodProductsInventoryAsync();
+        _foodProducts = await BistroFoodInventoryService.GetFoodProductsInventoryAsync();
     }
 }
