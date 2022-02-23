@@ -13,13 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bistro.WebApp", "src\Bistro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bistro.WebApi", "src\Bistro.WebApi\Bistro.WebApi.csproj", "{E79A1D32-259C-41E7-8A6B-E0FBEFFCCD16}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D23F53F5-B78F-4C17-8177-8E1AE5E57558}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{7312513E-BDA6-46AA-9C9E-09FA0F49E2AB}"
 	ProjectSection(SolutionItems) = preProject
 		nginx\Dockerfile = nginx\Dockerfile
 		nginx\nginx.conf = nginx\nginx.conf
 	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{818FB5EB-B30F-4AAB-8ADD-1FC014C4A771}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,10 @@ Global
 		{E79A1D32-259C-41E7-8A6B-E0FBEFFCCD16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E79A1D32-259C-41E7-8A6B-E0FBEFFCCD16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E79A1D32-259C-41E7-8A6B-E0FBEFFCCD16}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D23F53F5-B78F-4C17-8177-8E1AE5E57558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D23F53F5-B78F-4C17-8177-8E1AE5E57558}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D23F53F5-B78F-4C17-8177-8E1AE5E57558}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D23F53F5-B78F-4C17-8177-8E1AE5E57558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{818FB5EB-B30F-4AAB-8ADD-1FC014C4A771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{818FB5EB-B30F-4AAB-8ADD-1FC014C4A771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{818FB5EB-B30F-4AAB-8ADD-1FC014C4A771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{818FB5EB-B30F-4AAB-8ADD-1FC014C4A771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

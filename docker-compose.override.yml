@@ -1,52 +1,27 @@
 version: '3.4'
 
-networks:
-  bistro-network:
-    external: true
-
 services:
   bistro.webapi:
     container_name: bistrowebapi
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "DatabaseSettings:ConnectionString=mongodb://bistrodb:27017"
-    depends_on:
-      - bistro.db
-      - bistro.proxy
-    #ports:
-    #  - "5000:5000"
+      - ASPNETCORE_URLS=http://0.0.0.0:5100
+    ports:
+      - "5100:5100"
     expose:
-      - "5000"
+      - "5100"
     networks:
       - bistro-network
 
   bistro.webapp:
     container_name: bistrowebapp
     environment:
+      - "BistroApiUrl=http://bistro.webapi:5100"
       - ASPNETCORE_ENVIRONMENT=Development
-      - "BistroApiUrl=bistrowebapi:5000"
+      - ASPNETCORE_URLS=http://0.0.0.0:5101
     depends_on:
-      - bistro.db
       - bistro.webapi
     ports:
-      - "5001:5001"
-    #expose:
-    #  - "5001"
+      - "5101:5101"
     networks:
       - bistro-network
-
-  bistro.db:
-    container_name: bistrodb
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - ${WEBAPP_STORAGE_HOME}/site:/data/db
-
-  bistro.proxy:
-    container_name: bistronginx
-    ports:
-      - "8000:80"
-    networks:
-      - bistro-network
-    restart: always

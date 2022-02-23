@@ -6,18 +6,12 @@ services:
     build:
       context: .
       dockerfile: src/Bistro.WebApi/Dockerfile
-
   bistro.webapp:
     image: ${DOCKER_REGISTRY-}bistrowebapp
     build:
       context: .
       dockerfile: src/Bistro.WebApp/Dockerfile
 
-  bistro.db:
-    image: mongo
-
-  bistro.proxy:
-    image: ${DOCKER_REGISTRY-}bistronginx
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
+networks:
+  bistro-network:
+    external: true

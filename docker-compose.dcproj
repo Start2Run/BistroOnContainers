@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>d23f53f5-b78f-4c17-8177-8e1ae5e57558</ProjectGuid>
+    <ProjectGuid>818fb5eb-b30f-4aab-8add-1fc014c4a771</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>bistro.webapi</DockerServiceName>
