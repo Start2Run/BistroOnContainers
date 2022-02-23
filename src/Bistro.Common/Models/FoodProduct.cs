@@ -1,10 +1,10 @@
 ﻿namespace Bistro.Common.Models;
 
-public class FoodProduct
+public record FoodProduct
 {
-    public System.Guid MiId { get; set; }
-    public string MiCategory { get; set; }
-    //public byte[] MiImage { get; set; }
-    public string MiName { get; set; }
-    public float MiPrice { get; set; }
+    public string Id { get; init; }
+    public string Category { get; set; }
+    public byte[] Image { get; set; }
+    public string Name { get; set; }
+    public float Price { get; set; }
 }

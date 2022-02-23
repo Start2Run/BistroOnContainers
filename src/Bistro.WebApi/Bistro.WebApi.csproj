@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bistro.Common\Bistro.Common.csproj" />
+    <ProjectReference Include="..\Persistence\Persistence.csproj" />
   </ItemGroup>
 
 </Project>

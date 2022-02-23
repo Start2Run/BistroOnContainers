@@ -6,6 +6,9 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:5100
+      - "DatabaseSettings:ConnectionString=mongodb://bistrodb:27017"
+    depends_on:
+      - bistro.db
     ports:
       - "5100:5100"
     expose:
@@ -23,5 +26,17 @@ services:
       - bistro.webapi
     ports:
       - "5101:5101"
+    expose:
+      - "5101"
+    networks:
+      - bistro-network
+
+  bistro.db:
+    container_name: bistrodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ${WEBAPP_STORAGE_HOME}/site:/data/db
     networks:
       - bistro-network

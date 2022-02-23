@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Bistro.WebApi.Controllers
 {
     using Common.Models;
+    using Persistence.Contracts;
 
     [ApiController]
     [Route("api/[Controller]")]
@@ -10,20 +11,28 @@ namespace Bistro.WebApi.Controllers
     {
         private readonly ILogger<FoodProductController> _logger;
 
-        public FoodProductController(ILogger<FoodProductController> logger)
+        private readonly IFoodProductContext m_foodProductContext;
+
+        public FoodProductController(ILogger<FoodProductController> logger, IFoodProductContext foodProductContext)
         {
             _logger = logger;
+            m_foodProductContext = foodProductContext;
         }
 
         // GET api/values
         [HttpGet("inventory")]
-        public IEnumerable<FoodProduct> Get()
+        public async Task<IEnumerable<FoodProduct>> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new FoodProduct
+            var data = (await m_foodProductContext.GetProductsAsync()).AsQueryable();
+            if (!data.Any())
             {
-               MiId = Guid.NewGuid()
-            })
-            .ToArray();
+                await m_foodProductContext.AddProductsAsync(Enumerable.Range(1, 5).Select(index => new FoodProduct
+                {
+                    Name =$"Item {index}"
+                }));
+            }
+
+            return data;
         }
     }
 }

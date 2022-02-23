@@ -11,6 +11,8 @@ services:
     build:
       context: .
       dockerfile: src/Bistro.WebApp/Dockerfile
+  bistro.db:
+    image: mongo
 
 networks:
   bistro-network:

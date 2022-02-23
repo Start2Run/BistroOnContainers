@@ -45,7 +45,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 //app.UseAuthentication();
-//app.UseAuthorization();
+app.UseAuthorization();
 
 app.MapControllers();
 app.MapBlazorHub();

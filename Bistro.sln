@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{7312513E
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{818FB5EB-B30F-4AAB-8ADD-1FC014C4A771}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "src\Persistence\Persistence.csproj", "{89C8DDD4-1A3D-4C53-9781-09AA99EFDE57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{818FB5EB-B30F-4AAB-8ADD-1FC014C4A771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{818FB5EB-B30F-4AAB-8ADD-1FC014C4A771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{818FB5EB-B30F-4AAB-8ADD-1FC014C4A771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89C8DDD4-1A3D-4C53-9781-09AA99EFDE57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C8DDD4-1A3D-4C53-9781-09AA99EFDE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C8DDD4-1A3D-4C53-9781-09AA99EFDE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C8DDD4-1A3D-4C53-9781-09AA99EFDE57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{68492421-3C26-4B34-BA4F-9465F64DC494} = {A18887D1-3D8F-4F97-BCA6-7358DBA89CA3}
 		{2644D710-9159-4331-8BC3-154E35CD7752} = {A18887D1-3D8F-4F97-BCA6-7358DBA89CA3}
 		{E79A1D32-259C-41E7-8A6B-E0FBEFFCCD16} = {A18887D1-3D8F-4F97-BCA6-7358DBA89CA3}
+		{89C8DDD4-1A3D-4C53-9781-09AA99EFDE57} = {A18887D1-3D8F-4F97-BCA6-7358DBA89CA3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C80D35B-3350-4D7A-B00F-DF460DBBB8DE}

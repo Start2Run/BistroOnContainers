@@ -19,20 +19,20 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>MiId</th>
-                <th>MiName</th>
-                <th>MiCategory</th>
-                <th>MiPrice</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var forecast in _foodProducts)
             {
                 <tr>
-                    <td>@forecast.MiId</td>
-                    <td>@forecast.MiName</td>
-                    <td>@forecast.MiCategory</td>
-                    <td>@forecast.MiPrice</td>
+                    <td>@forecast.Id</td>
+                    <td>@forecast.Name</td>
+                    <td>@forecast.Category</td>
+                    <td>@forecast.Price</td>
                 </tr>
             }
         </tbody>
